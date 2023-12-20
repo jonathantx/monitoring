@@ -146,7 +146,7 @@ func readSitesArchive() []string {
 
 	var sites []string
 
-	arquivo, err := os.Open("sites.txt")
+	arquivo, err := os.Open("archives/sites.txt")
 
 	if err != nil {
 		fmt.Println("Ocorreu um erro ao ler arquivo:", err)
@@ -174,7 +174,7 @@ func readSitesArchive() []string {
 
 func registerLog(site string, status bool) {
 
-	arquivo, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	arquivo, err := os.OpenFile("archives/log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 
 	if err != nil {
 		fmt.Println(err)
